@@ -1,0 +1,57 @@
+{% load staticfiles %} 
+ 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Concise Python</title>
+        <!-- <link rel="stylesheet" href="{% static 'personal/bootstrap/css/bootstrap.min.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'home/style.css' %}">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    </head>
+    <body>
+
+        <div id="wrapper"> 
+
+            <nav class="nav-bar">
+
+                <div id="logo">
+                    <!--<h2>py2k</h2>-->
+                    <iframe src="{% static 'home/img/py-logo-2.svg' %}" frameborder=0></iframe>
+                </div>
+                <h1 class="main-header"><b>Concise_</b>Python</h1>
+
+               <ul class="nav-ul">
+                   <li><a href="/">Home</a></li>
+                   <li><a href="/blog">Blog</a></li>
+                   <li><a href="/contact">Contact</a></li>
+                </ul>
+
+                <div class="search">
+                    <input type="search" class="search-field">
+                    <button class="fa fa-search" aria-hidden="true"></button>
+                </div>
+            </nav>
+
+
+            <main>
+                {% block content %} 
+
+                {% endblock %} 
+                
+            </main>
+        </div>
+
+        <script src="{% static 'home/js/script.js' %}"></script>
+    </body>
+</html>
